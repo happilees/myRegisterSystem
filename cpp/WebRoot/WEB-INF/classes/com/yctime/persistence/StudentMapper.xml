@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.yctime.persistence.StudentMapper">
+ <resultMap type="FlagCustom" id="flagCustomMap">  
+        <id property="id" column="id" />  
+        <result property="name" column="name" />  
+    </resultMap>  
+  
+    <resultMap type="FlagCustom" id="flagCustomStudentMap" extends="flagCustomMap">  
+        <collection property="students" ofType="Student">  
+            <id property="id" column="studentid" />  
+            <result property="username" column="username" />  
+            <result property="sex" column="sex"/> 
+            <result property="classname" column="classname"/>
+            <result property="tel" column="tel"/>
+            <result property="power" column="power"/>
+            <result property="introduce" column="introduce"/>
+            <result property="myflags" column="myflags"/>
+            <result property="isfile" column="isfile"/>
+            <result property="filename" column="filename"/>
+            <result property="qq" column="qq"/>
+        </collection>  
+    </resultMap>  
+<insert id="insertStudent" useGeneratedKeys="true" keyProperty="id" parameterType="Student">
+<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+select last_insert_id()
+</selectKey>
+insert into student(username,sex,classname,tel,power,introduce,myflags,isfile,filename,qq) 
+values(#{username},#{sex},#{classname},#{tel},#{power},#{introduce},#{myflags},#{isfile},#{filename},#{qq})
+</insert>
+<select id="getstupageCount" resultType="java.lang.Integer">
+select count(*) from student
+</select> 
+<select id="getstudentBypage" parameterType="Page" resultType="Student">
+select * from student where id limit #{pageBegin},#{pageGet}
+</select>
+<select id="getstudentById" parameterType="int" resultType="Student">
+select * from student where id=#{id}
+</select>
+<insert id="insertSelection" parameterType="Selection">
+<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+select last_insert_id()
+</selectKey>
+insert into selection(studentid,flagid) values(#{studentid},#{flagid})
+</insert>
+<update id="updateStudent" parameterType="Student">
+update student set myflags=#{myflags},isfile=#{isfile},filename=#{filename} where id=#{id}
+</update>
+<select id="selectFlagStudent" parameterType="int"  
+        resultMap="flagCustomStudentMap">  
+        select s.id as studentid,s.username as username,s.sex as sex,
+        s.classname as classname,s.tel as tel,s.power as power,s.introduce as introduce,
+        s.myflags as myflags, s.isfile as isfile,s.filename as filename,s.qq as qq,
+        f.id,f.name from flag f left join selection on f.id=selection.flagid left join student
+        s on selection.studentid=s.id where f.id=#{id}
+</select>
+<select id="getflagById" parameterType="int" resultType="Flag">
+select * from flag where id=#{id}
+</select>
+<insert id="insertflag" parameterType="Flag">
+<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+select last_insert_id()
+</selectKey>
+insert into flag(name) values(#{name})
+</insert>
+<select id="getstudent" parameterType="Student" resultType="Student">
+select * from student where tel=#{tel}
+</select>
+<select id="getSelectionId" parameterType="Selection" resultType="java.lang.Integer">
+select id from selection where studentid=#{studentid} and flagid=#{flagid}  
+</select>
+<delete id="deleteSelection" parameterType="Selection">
+delete from selection where studentid=#{studentid}
+</delete>
+<select id="getAllstudent" resultType="Student">
+select * from student order by id
+</select>
+</mapper>

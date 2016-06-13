@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+      <constant name="struts.action.extension" value="do,action"/>
+      <constant name="struts.multipart.maxSize" value="104857600"/>
+      <package name="register" namespace="/" extends="json-default">
+           <action name="student_*" class="com.yctime.web.Action.registerAction" method="{1}">
+                <result name="registered">/WEB-INF/register.jsp</result>
+                <result name="addedflag">/addflag.jsp</result>
+           </action>
+           <action name="admin_*" class="com.yctime.web.Action.adminAction" method="{1}">
+                <result name="loginsuccess">/WEB-INF/adminmanager.jsp</result>
+                <result name="loginfail">adminlogin.jsp</result>
+                <result name="gostudent">/WEB-INF/student.jsp</result>
+                <result name="otherStudent">/WEB-INF/adminmanager.jsp</result>
+                <result name="flagFilter">/WEB-INF/filter.jsp</result>
+                <result name="studentFlagfilter">/WEB-INF/student_flagfilter.jsp</result>
+           </action>
+           <action name="FileDownload" class="com.yctime.web.Action.FileDownload">  
+           <result name="success" type="stream">
+               <!-- 设置返回类型（格式） -->  
+               <param name="contentType">text/plain</param>  
+               <!-- 是否内联 contentDisposition默认内联 -->
+               <param name="contentDisposition">attachment;fileName="${fileName}"</param>  
+               <!-- 与对应的Action的getinputName一致 -->
+               <param name="inputName">downloadFile</param>  
+               <param name="bufferSize">1024</param>  
+           </result>
+           <result name="loginfail">adminlogin.jsp</result>  
+       </action>  
+      </package>
+</struts>
