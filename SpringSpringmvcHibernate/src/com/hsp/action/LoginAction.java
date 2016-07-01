@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.hsp.domain.User;
 import com.hsp.service.Inter.UserService;
+import com.hsp.utils.LoadPhoto;
 
 @Controller//用来标注当前类是springmvc控制类
 //@RequestMapping("/user")//如果要加上就相当与struts的namespace

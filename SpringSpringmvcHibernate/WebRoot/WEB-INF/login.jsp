@@ -32,9 +32,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <div class="page-container">
             <h1>登录</h1><br><br>
-            <form action="login.do" method="post">
+            <form action="login.do" method="post" enctype ="multipart/form-data">
                 <input type="text" name="username" class="username" placeholder="用户名">
                 <input type="password" name="password" class="password" placeholder="密码">
+                <input type="file" name="picture" class="username">
                 <button type="submit"> 登 录 </button>
                 <div class="username" style="margin-top:20px;color:red;"><span>${message}</span></div>
             </form>
