@@ -1,0 +1,80 @@
+*{
+     margin:0 auto;
+     padding:0;
+}
+.bigbigdiv{
+	overflow:hidden;
+}
+body{
+	text-align:center;
+}
+.allteacherbig{
+	width:620px;
+	border:0px;
+	align:center;
+	cellpadding:0px;
+	cellspacing:0px;
+	margin:0 auto;
+	margin-top:10px;
+	overflow:hidden;
+	/*background-color:red;*/
+}
+.everyteacher{
+	width:150px;
+	height:250;
+	border:0px;
+	text-align:center;
+	margin:0 auto;
+	margin-top:40px;
+	margin-left:50px;
+	margin-bottom:20px;
+	float:left;
+	/*background-color:red;*/
+}
+.everyteacher img{
+	width:150px;
+	height:209;
+	border:0px;
+	align:center;
+	margin:0 auto;
+	float:left;
+	/*background-color:red;*/
+}
+.everyteacher span{
+	width:150px;
+	height:50px;
+	border:0px;
+	align:center;
+	margin:0 auto;
+	margin-top:20px;
+	size:30px;
+	float:left;
+}
+.teacherintro{
+	width:550px;
+	border:0px;
+	align:center;
+	margin:0 auto;
+	margin-top:20px;
+	margin-left:10px;
+	size:30px;
+	float:left;
+	/*background-color:red;*/
+}
+.teacherpicture{
+	width:150px;
+	border:0px;
+	align:center;
+	margin:0 auto;
+	margin-top:20px;
+	size:30px;
+	float:left;
+	/*background-color:red;*/
+}
+.teachertext{
+	border:0;  
+    overflow: hidden;  
+    color: #666464;  
+    line-height:20px;
+    display:block;
+}

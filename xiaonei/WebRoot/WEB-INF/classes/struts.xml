@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    <struts>
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.multipart.maxSize" value="104857600"/>
+    <package name="global" extends="struts-default" abstract="true">
+    <global-results>
+    <result name="nologin">/WEB-INF/public/login.jsp</result>
+    <result name="nouserlogin">/WEB-INF/admin/login.jsp</result>
+    <result name="userloginsuccess">/WEB-INF/admin/shouye.jsp</result>
+    <result name="userloginfail">/WEB-INF/admin/login.jsp</result>
+    </global-results>
+    </package>
+    <package name="test" namespace="/test" extends="global">
+    <action name="test_*" class="testAction" method="{1}">
+    <result name="success">/WEB-INF/Test.jsp</result>
+    </action>
+    <action name="goshouye_*" class="gotoshouyeAction" method="{1}">
+    <result name="gotoshouye">/WEB-INF/public/shouye.jsp</result>
+    </action>
+    <action name="go_*" class="gothirdbarAction" method="{1}">
+    <result name="getthirdbar">/WEB-INF/public/thirdbar.jsp</result>
+    <result name="gotoworddoc">/WEB-INF/public/worddoc.jsp</result>
+    <result name="gotovedio">/WEB-INF/public/vedio.jsp</result>
+    <result name="goziyuan">/WEB-INF/public/ziyuan.jsp</result>
+    </action>
+    <action name="word_*"  class="wordAction" method="{1}">
+    <result name="success">/WEB-INF/public/word.jsp</result>
+    <result name="homeworksuccess">/WEB-INF/public/homeworksuccess.jsp</result>
+    <result name="gohomework">/WEB-INF/public/homework.jsp</result>
+    <result name="gohandinhw">/WEB-INF/public/handinhomework.jsp</result>
+    <result name="gototeacher">/WEB-INF/public/allteacher.jsp</result>
+    <result name="gotooneteacher">/WEB-INF/public/teacher.jsp</result>
+    </action>
+    <action name="upload_*" class="uploadAction" method="{1}">
+    <result name="goloadppt">/WEB-INF/admin/publicfile.jsp</result>
+    <result name="gouploadword">/WEB-INF/admin/publicword.jsp</result>
+    <result name="success">/WEB-INF/admin/publicfile.jsp</result>
+    <result name="wordsuccess">/WEB-INF/admin/publicfile.jsp</result>
+    <result name="videosuccess">/WEB-INF/admin/publicfile.jsp</result>
+    <result name="imagesuccess">/WEB-INF/admin/publicfile.jsp</result>
+    </action>
+    <action name="gotofourth_*" class="gotofourthAction" method="{1}">
+    <result name="success">/WEB-INF/public/fourthppt.jsp</result>
+    <result name="gotovediodetail">/WEB-INF/public/vediodetail.jsp</result>
+    <result name="gofourword">/WEB-INF/public/fourword.jsp</result>
+    </action>
+    <action name="fckupload_*" class="fckuploadAction" method="{1}">
+    <result name="uploadfcksuccess">/WEB-INF/admin/publicword.jsp</result>
+    <result name="success">/WEB-INF/admin/publicword.jsp</result>
+    </action>
+    <action name="login_*" class="loginAction" method="{1}">
+    <result name="gologin">/WEB-INF/public/login.jsp</result>
+    <result name="goregister">/WEB-INF/public/register.jsp</result>
+    <result name="loginsuccess">/WEB-INF/public/shouye.jsp</result>
+    <result name="loginfail">/WEB-INF/public/login.jsp</result>
+    <result name="out">/WEB-INF/admin/login.jsp</result>
+    <result name="goliuyan">/WEB-INF/public/comment.jsp</result>
+    <result name="gohomework">/WEB-INF/public/homework.jsp</result>
+    <result name="login">/WEB-INF/public/onLineTest/index.jsp</result>
+    </action>
+    <action name="register_*" class="registerAction" method="{1}">
+    <result name="registersuccess">/WEB-INF/public/login.jsp</result>
+    </action>
+    <action name="liuyan_*" class="liuyanAction" method="{1}">
+    <result name="goliuyan">/WEB-INF/public/comment.jsp</result>
+    <result name="liuyansuccess">/WEB-INF/public/comment.jsp</result>
+    <result name="gomanagerliuyan">/WEB-INF/admin/managerliuyan.jsp</result>
+    <result name="goreply">/WEB-INF/admin/liuyanreply.jsp</result>
+    </action>
+    <action name="comreply_*" class="replyAction" method="{1}">
+    <result name="replysuccess">/WEB-INF/admin/managerliuyan.jsp</result>
+    </action>
+    <action name="seehomework_*" class="homeworkAction" method="{1}">
+    <result name="seestuhomework">/WEB-INF/admin/homework.jsp</result>
+    <result name="goeveryone">/WEB-INF/admin/everyone.jsp</result>
+    <result name="gooneguy">/WEB-INF/admin/seeoneguy.jsp</result>
+    <result name="publishhw">/WEB-INF/admin/publichomework.jsp</result>
+    </action>
+    <action name="content_*" class="contentAction" method="{1}">
+    <result name="gocontent">/WEB-INF/admin/content.jsp</result>
+    <result name="gochangeword">/WEB-INF/admin/gochangeword.jsp</result>
+    <result name="changedword">/WEB-INF/admin/gochangeword.jsp</result>
+    <result name="godeletethirdbar">/WEB-INF/admin/deletethirdbar.jsp</result>
+    <result name="deletedthirdbar">/WEB-INF/admin/deletethirdbar.jsp</result>
+    <result name="gochangefourword">/WEB-INF/admin/gochangefourword.jsp</result>
+    <result name="goziyuanbar">/WEB-INF/admin/ziyuanbar.jsp</result>
+    <result name="gocarousel">/WEB-INF/admin/carousel.jsp</result>
+     <result name="gochangecartea">/WEB-INF/admin/changecartea.jsp</result>
+     <result name="seeworddoc">/WEB-INF/admin/seeworddoc.jsp</result>
+     <result name="seevedio">/WEB-INF/admin/seevedio.jsp</result>
+    </action>
+    <action name="special_*" class="carouselAction" method="{1}">
+    <result name="gocarousel">/WEB-INF/admin/carousel.jsp</result>
+    <result name="gochangecartea">/WEB-INF/admin/changecartea.jsp</result>
+    <result name="imagesuccess">/WEB-INF/admin/publicfile.jsp</result>
+    </action>
+    <action name="kindeditor_*" class="testkindeditorAction"  method="{1}">
+    <result name="success">/WEB-INF/admin/publicwordbykindeditor.jsp</result>
+    </action>
+    <action name="hwDownloadAction" class="HwDownloadAction">  
+           <result name="success" type="stream">
+               <!-- 设置返回类型（格式） -->  
+               <param name="contentType">text/plain</param>  
+               <!-- 是否内联 contentDisposition默认内联 -->
+               <param name="contentDisposition">attachment;fileName="${fileName}"</param>  
+               <!-- 与对应的Action的getinputName一致 -->
+               <param name="inputName">downloadFile</param>  
+               <param name="bufferSize">1024</param>  
+           </result>
+     </action>  
+    </package>
+    <package name="exam" namespace="/examOnline" extends="global">
+     <!--  add-->
+        <action name="FileDownLoad" class="com.hsp.web.action.FileDownLoadAction">
+            <result name="success" type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="contentDisposition">attachment;fileName="${fileName}"</param>
+                <param name="inputName">downloadFile</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+   <action name="*_Action" class="examOnlineAction" method="{1}">
+   <result name="deleteAllStudent">/WEB-INF/admin/TestOnline/studentScore.jsp</result>
+            <result name="showExam">/WEB-INF/admin/TestOnline/ExamList.jsp</result>
+            <result name="submitList">/WEB-INF/admin/TestOnline/submitList.jsp</result>
+            <result name="studentsScore">/WEB-INF/admin/TestOnline/studentScore.jsp</result>
+            <result name="forwardAddQuestion">/WEB-INF/admin/TestOnline/addQuestion.jsp</result>
+           
+        <!--add-->
+        <result name="showOnlineTestStudent">/WEB-INF/admin/TestOnline/onlineTestStudents.jsp</result>
+        <result name="findOnlineTestFlag">/WEB-INF/admin/TestOnline/onlineTestFlag.jsp</result>
+        <result name="showOnlineTest">/WEB-INF/admin/TestOnline/onlineTestResult.jsp</result>
+        </action>
+
+        <action name="findOnlineAction" class="examOnlineAction" method="findExam">
+            <result name="findExam">/WEB-INF/admin/TestOnline/showExam.jsp</result>
+        </action>
+    </package>
+
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <package name="examJson" namespace="/exam" extends="json-default,global">
+        <action name="*_Action" class="examOnlineAction" method="{1}">
+            <result name="addExam" type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+            <result name="showExamByCurrentPage" type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
+
+        <action name="testJson" class="com.hsp.tesst.TestJson" method="loadInfo">
+            <result name="success" type="json"></result>
+        </action>
+        <action name="loadInfo" class="com.hsp.tesst.InfoAction" method="loadInfo">
+            <result name="success" type="json"></result>
+        </action>
+    </package>
+
+    <package name="choice" namespace="/choice" extends="json-default,global">
+        <action name="*_Action" class="choiceQuestionAction" method="{1}">
+            <result name="addChooses" type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="trueOrFalse" namespace="/tureOrFalse" extends="json-default">
+        <action name="*_Action" class="torfQuestionAction" method="{1}">
+            <result name="addTrueOrFalse" type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="fillBlank" namespace="/fillBlank" extends="json-default">
+        <action name="*_Action" class="fillBlankQuestionAction" method="{1}">
+            <result name="addFillBlank" type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="essay" namespace="/essay" extends="json-default">
+        <action name="*_Action" class="essayQuestionAction" method="{1}">
+            <result name="addEssay" type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
+    </package>
+
+
+    <package name="testOnline" namespace="/testOnline" extends="global">
+        <action name="*_Action" class="testOnlineAction" method="{1}">
+            <result name="showExamList">/WEB-INF/public/onLineTest/exercise.jsp</result>
+            <result name="showQuestions">/WEB-INF/public/onLineTest/showQuestion.jsp</result>
+            <result name="login">/WEB-INF/public/onLineTest/index.jsp</result>
+            <result name="showOnlineTestQuestion">/WEB-INF/public/onLineTest/onlineExamination.jsp</result>
+            <result name="courseTest">/WEB-INF/public/onLineTest/courseTest.jsp</result>
+            <result name="showCapterList">/WEB-INF/public/onLineTest/capterTest.jsp</result>
+            <result name="showCapterQuestion">/WEB-INF/public/onLineTest/showcapterTest.jsp</result>
+            <result name="calculatScore">/WEB-INF/public/onLineTest/testResult.jsp</result>
+            <result name="calculateCourseScore">/WEB-INF/public/onLineTest/testResult.jsp</result>
+       <result name="chenggong">/WEB-INF/public/onLineTest/testup5.jsp</result>
+            <result name="onlineTest">/WEB-INF/public/onLineTest/onlineTestResult.jsp</result>
+        </action>
+    </package>
+
+    </struts>
