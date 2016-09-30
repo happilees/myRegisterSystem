@@ -1,0 +1,51 @@
+*{
+     margin:0 auto;
+     padding:0;
+}
+.bigbigdiv{
+	overflow:hidden;
+}
+body{
+	text-align:center;
+}
+.vediodetailbig{
+	width:720px;
+	height:520px;
+    border:0px;
+    cellpadding:0px;
+    cellspacing:0px;
+    align:center;
+	/*float:left;*/
+    margin:0 auto;
+}
+.vediodetailcenter{
+	width:620px;
+	height:420px;
+    border:0px;
+    cellpadding:0px;
+    cellspacing:0px;
+    align:center;
+	/*float:left;*/
+    margin:0 auto;
+    margin-top:80px;
+    margin-left:50px;
+     
+}
+.vediobig{
+	width:1000px;
+	height:720px;
+    border:0px;
+    cellpadding:0px;
+    cellspacing:0px;
+    align:center;
+	float:left;
+    margin:0 auto;
+    margin-top:50px;
+}
+.vediocenter{
+	float:left;
+	width:490px;
+	height:720px;
+    margin-top:100px;
+    margin-left:250px;
+}

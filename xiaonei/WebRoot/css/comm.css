@@ -1,0 +1,209 @@
+body
+{
+    margin:0;
+    text-align:center;
+}
+a{
+  border-right: 0px;
+  border-top: 0px;
+  display: block;
+  font-weight: bold;
+  border-left: 0px;
+  border-bottom: 0px;
+  color:#5d5b5b;
+  text-decoration: none;
+  font-size:18px;
+  }
+a:hover{
+  color:#6c68a4;
+   text-decoration:underline;
+  }
+li{
+	list-style-type:none;
+}
+/*��ɫ14px*/
+.font1
+{
+	font-size:14px;
+	color:#fcfcfc;
+	font-weight:bold;
+}
+/*��ɫ14px*/
+.font2
+{
+	font-size:14px;
+	color:#f60303;
+	font-weight:bold;
+}
+/*��ɫ14px*/
+.font3
+{
+	font-size:14px;
+	color:#5760a6;
+	font-weight:bold;
+}
+/*��ɫ18px*/
+.font4
+{
+	font-size:18px;
+	color:#02080a;
+	font-weight:bold;
+}
+/*��ɫ14px*/
+.font5
+{
+	font-size:14px;
+	color:white;
+	font-weight:bold;
+}
+/*��ɫ14px*/
+.font6
+{
+	font-size:14px;
+	color:#df3a24;
+}
+/*18pxб��*/
+.font7
+{
+	font-family:"����";
+	font-size:18px;
+	font-style:italic;
+}
+/*�Ӵ�18pxб��*/
+.font8
+{
+	font-family:Segoe Script;
+	font-size:16px;
+	font-style:bold italic;
+}
+/*�Ӵ�20px*/
+.font9
+{
+	font-family:"����";
+	font-size:20px;
+	font-style:bold;
+	color:#040404;
+}
+/*��ɫ16px*/
+.font10
+{
+	font-family:Segoe Print;
+	font-size:16px;
+	color:#000000;
+}
+/*��ɫ18px*/
+.font11
+{
+	font-family:"����";
+	font-size:18px;
+	color:#011745;
+}
+/*��ɫ18px*/
+.font12
+{
+	font-family:latha;
+	font-size:18px;
+	color:#848484;
+}
+/*�Һ�ɫ18px*/
+.font13
+{
+	font-family:latha;
+	font-size:18px;
+	color:#4a4a4a;
+}
+/*�����ɫ18px*/
+.font16
+{
+	font-family:tahoma;
+	font-size:16px;
+	color:#767373;
+}
+/*��ɫ�ش��*/
+.font14
+{
+	font-family:Impact;
+	font-size:80px;
+	color:#040404;
+}
+/*�Ұ�ɫ18px*/
+.font15
+{
+	font-family:latha;
+	font-size:18px;
+	color:#d4d6d7;
+}
+/*ǳ�Ұ�ɫ18px*/
+.font17
+{
+	font-family:tahoma;
+	font-size:18px;
+	color:#e5e5e5;
+}
+/*ǳ��ɫ18px*/
+.font18
+{
+	font-family:tahoma;
+	font-size:16px;
+	color:#5a5656;
+}
+/*ǳ��ɫ65px*/
+.font19{
+	font-family:Arial;
+	font-size:65px;
+	color:#34393d;
+}
+/*���ɫ18px*/
+.font20{
+	font-family:Arial;
+	font-size:18px;
+	color:#ffffff;
+}
+/*�ش�����ɫpx*/
+.font21{
+	font-family:Arial;
+	font-size:250px;
+	color:#ffffff;
+}
+/*��ɫ22px*/
+.font22{
+	font-family:Arial;
+	font-size:22px;
+	color:#5dbdf4;
+}
+/*��ɫ30px*/
+.font23{
+	font-family:Arial;
+	font-size:30px;
+	color:#df3a24;
+}
+/*�к�ɫ16px*/
+.font24{
+	font-family:Arial;
+	font-weight:blod;
+	font-size:16px;
+	color:#5c4e4e;
+	line-height:32px;
+}
+/*��ɫ14px*/
+.font25
+{
+	font-family:Arial;
+	font-size:14px;
+	color:#2a2626;
+}
+/*��ɫ14px*/
+.font26
+{
+	font-family:Arial;
+	font-size:14px;
+	color:#05961d;
+}
+/*��ɫ14px*/
+.font27
+{
+	font-family:Lao UI;
+	font-size:16px;
+	color:#2a2626;
+	font-weight:bold;
+}

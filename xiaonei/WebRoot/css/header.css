@@ -1,0 +1,47 @@
+body{
+	text-align:center;
+	margin:0 auto;
+}
+.headerdiv{
+		width:1004px;
+		text-align:center;
+	  margin:0 auto;
+}
+.loginornot{
+	height:28px;
+	border:0px;
+	align:center;
+	cellpadding:0px;
+	cellspacing:0px;
+	margin:0 auto;
+}
+.message{
+
+	height:20px;
+	margin-top:2px;
+	margin-left:850px;
+}
+.header{
+
+	height:228px;
+	border:0px;
+	align:center;
+	cellpadding:0px;
+	cellspacing:0px;
+	background-image:url(../images/top_1.jpg);
+	margin:0 auto;
+}
+.daohang{
+
+	 height:38px;
+	  border:0px;
+	   align:left;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	     background-image:url(../images/menu.jpg);
+	     margin:0 auto;
+}
+.daohang li{
+	list-style-type:none;
+	z-index:102;
+}

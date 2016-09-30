@@ -1,0 +1,47 @@
+*{
+     margin:0 auto;
+     padding:0;
+}
+.bigbigdiv{
+	overflow:hidden;
+}
+body{
+	text-align:center;
+}
+.rightmidddle{
+	width:620px;
+	height:800px;
+    border:0px;
+    cellpadding:0px;
+    cellspacing:0px;
+    align:center;
+	/*float:left;*/
+    margin:0 auto;
+    margin-left:30px;
+    background-color:pink;
+}
+.text{
+	width:720px;
+	display:block;
+    border:0px;
+    cellpadding:0px;
+    cellspacing:0px;
+    align:center;
+	/*float:left;*/
+    margin:0 auto;
+    /*background-color:pink;*/
+}
+.textarea{
+    border:0;  
+    background-color:#ffffff;  
+    scrollbar-arrow-color:#ffffff;  
+    scrollbar-base-color:lightsalmon;  
+   
+    color: #666464;  
+    height: auto; 
+    line-height:20px;
+ 
+    display:block;
+    
+    margin-left:40px; 	
+}

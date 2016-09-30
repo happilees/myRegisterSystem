@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"  
+  xmlns:tx="http://www.springframework.org/schema/tx"  
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+     <!-- 启动注解扫描 -->
+  <context:annotation-config/>
+  <!-- 配置databaseSource -->
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	    <property name="driverClassName" value="org.gjt.mm.mysql.Driver"/>
+	    <property name="url" value="jdbc:mysql://localhost:3306/xiaonei2?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true"/>
+	    <property name="username" value="root"/>
+	    <property name="password" value="root"/>
+	     <!-- 连接池启动时的初始值 -->
+	<property name="initialSize" value="3"/>
+	 <!-- 连接池的最大值 -->
+	 <property name="maxActive" value="500"/>
+ <!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+	<property name="maxIdle" value="2"/>
+	<!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+	<property name="minIdle" value="1"/>
+</bean>
+
+<!-- 配置sessionFactory -->
+<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+     <property name="dataSource" ref="dataSource"/>
+     <property name="mappingResources">
+	    <list>
+	      <value>com/hsp/domain/Answer.hbm.xml</value>
+	      <value>com/hsp/domain/Carousel.hbm.xml</value>
+	       <value>com/hsp/domain/Choice.hbm.xml</value>
+	      <value>com/hsp/domain/Comments.hbm.xml</value>
+	      <value>com/hsp/domain/Commentsreply.hbm.xml</value>
+	      <value>com/hsp/domain/Essay.hbm.xml</value>
+	       <value>com/hsp/domain/Exam.hbm.xml</value>
+	      <value>com/hsp/domain/Fillblank.hbm.xml</value>
+	      <value>com/hsp/domain/Friendslink.hbm.xml</value>
+	      <value>com/hsp/domain/Homework.hbm.xml</value>
+	       <value>com/hsp/domain/Navigationbar.hbm.xml</value>
+	      <value>com/hsp/domain/News.hbm.xml</value>
+	      <value>com/hsp/domain/Newstype.hbm.xml</value>
+	      <value>com/hsp/domain/Pptorphoto.hbm.xml</value>
+	       <value>com/hsp/domain/Score.hbm.xml</value>
+	      <value>com/hsp/domain/Showpicture.hbm.xml</value>
+	      <value>com/hsp/domain/Student.hbm.xml</value>
+	       <value>com/hsp/domain/Torfquestions.hbm.xml</value>
+	      <value>com/hsp/domain/User.hbm.xml</value>
+	      <value>com/hsp/domain/Video.hbm.xml</value>
+	      <value>com/hsp/domain/Word.hbm.xml</value>
+	     <value>com/hsp/domain/Fourword.hbm.xml</value>
+	     <value>com/hsp/domain/Worddoc.hbm.xml</value>
+	     <value>com/hsp/domain/Teacher.hbm.xml</value>
+	     <value>com/hsp/domain/Answer1.hbm.xml</value>
+	     <value>com/hsp/domain/Ziyuan.hbm.xml</value>
+	     <value>com/hsp/domain/Fourworddoc.hbm.xml</value>
+	     <value>com/hsp/domain/Teacherphw.hbm.xml</value>
+	    </list>
+     </property>
+     <property name="hibernateProperties">
+	    <value>
+	        	hibernate.dialect=org.hibernate.dialect.MySQLDialect
+	        	hibernate.hbm2ddl.auto=update
+				hibernate.format_sql=false
+				hibernate.autoReconnect=true	      
+	  </value>
+    </property>
+</bean>
+     <!-- 
+     <bean id="testService" class="com.hsp.test.testService">
+  <property name="name" value="ok"/>
+  </bean>
+  <bean id="testService2" class="com.hsp.service.testService">
+  <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  <bean id="testAction" class="com.hsp.web.action.test" scope="prototype">
+  <property name="testservice" ref="testService2"/>
+  </bean> -->
+<!-- 上面是测试，下面开始才是主要 -->
+<!-- 配置service -->
+<bean id="thirdbarServiceImpl" class="com.hsp.service.Impl.thirdbarServiceImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<bean id="wordServiceImpl" class="com.hsp.service.Impl.wordServiceImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<bean id="fourthServiceImpl" class="com.hsp.service.Impl.fourthServiceImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<bean id="uploadServiceImpl" class="com.hsp.service.Impl.uploadServiceImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<bean id="studentServiceImpl" class="com.hsp.service.Impl.studentServiceImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<bean id="examServiceImpl" class="com.hsp.service.Impl.examServiceImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<bean id="examOnlineServiceImpl" class="com.hsp.service.Impl.ExamOnlineServiceImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+<!-- 配置Action -->
+ <bean id="gotoshouyeAction" class="com.hsp.web.action.goshouyeAction" scope="prototype">
+  <property name="thirdbarServiceInter" ref="thirdbarServiceImpl"/>
+  <property name="wordServiceInter" ref="wordServiceImpl"/>
+  </bean>
+  <bean id="gothirdbarAction" class="com.hsp.web.action.thirdbarAction" scope="prototype">
+  <property name="thirdbarServiceInter" ref="thirdbarServiceImpl"/>
+  </bean>
+  <bean id="wordAction" class="com.hsp.web.action.wordAction" scope="prototype">
+  <property name="wordServiceInter" ref="wordServiceImpl"/>
+  <property name="studentServiceInter" ref="studentServiceImpl"/>
+  </bean>
+  <bean id="uploadAction" class="com.hsp.web.action.uploadAction" scope="prototype">
+  <property name="fourthServiceInter" ref="fourthServiceImpl"/>
+   <property name="uploadServiceInter" ref="uploadServiceImpl"/>
+  </bean>
+  <bean id="gotofourthAction" class="com.hsp.web.action.gotofourthAction" scope="prototype">
+  <property name="fourthServiceInter" ref="fourthServiceImpl"/>
+  <property name="thirdbarServiceInter" ref="thirdbarServiceImpl"/>
+  </bean>
+  <bean id="fckuploadAction" class="com.hsp.web.action.fckuploadAction" scope="prototype">
+  <property name="fourthServiceInter" ref="fourthServiceImpl"/>
+  <property name="uploadServiceInter" ref="uploadServiceImpl"/>
+  </bean>
+  <bean id="loginAction" class="com.hsp.web.action.loginAction" scope="prototype">
+  <property name="studentServiceInter" ref="studentServiceImpl"/>
+  <property name="thirdbarServiceInter" ref="thirdbarServiceImpl"/>
+  <property name="wordServiceInter" ref="wordServiceImpl"/>
+  </bean>
+  <bean id="registerAction" class="com.hsp.web.action.registerAction" scope="prototype">
+  <property name="studentServiceInter" ref="studentServiceImpl"/>
+  </bean>
+  <bean id="liuyanAction" class="com.hsp.web.action.liuyanAction" scope="prototype">
+   <property name="studentServiceInter" ref="studentServiceImpl"/>
+  </bean>
+  <bean id="replyAction" class="com.hsp.web.action.replyAction" scope="prototype">
+  <property name="studentServiceInter" ref="studentServiceImpl"/>
+  </bean>
+  <bean id="homeworkAction" class="com.hsp.web.action.homeworkAction" scope="prototype">
+  <property name="studentServiceInter" ref="studentServiceImpl"/>
+  </bean>
+  <bean id="HwDownloadAction" class="com.hsp.web.action.HwDownloadAction" scope="prototype">
+  </bean>
+    <bean id="examOnlineAction" class="com.hsp.web.action.ExamOnlineAction" scope="prototype">
+        <property name="examOnlineServiceInter" ref="examOnlineServiceImpl"></property>
+    </bean>
+
+    <bean id="choiceQuestionAction" class="com.hsp.web.action.ChoiceQuestionAction" scope="prototype">
+        <property name="examOnlineServiceInter" ref="examOnlineServiceImpl"></property>
+    </bean>
+
+    <bean id="torfQuestionAction" class="com.hsp.web.action.TureOrFalseQuestionAction" scope="prototype">
+        <property name="examOnlineServiceInter" ref="examOnlineServiceImpl"></property>
+    </bean>
+
+    <bean id="fillBlankQuestionAction" class="com.hsp.web.action.FillBlankQuestionAction" scope="prototype">
+        <property name="examOnlineServiceInter" ref="examOnlineServiceImpl"></property>
+    </bean>
+
+    <bean id="essayQuestionAction" class="com.hsp.web.action.EssayQuestuinAction" scope="prototype">
+        <property name="examOnlineServiceInter" ref="examOnlineServiceImpl"></property>
+    </bean>
+
+    <bean id="testOnlineAction" class="com.hsp.web.action.TestOnlineAction" scope="prototype">
+        <property name="examOnlineServiceInter" ref="examOnlineServiceImpl"></property>
+    </bean>
+    
+    <bean id="contentAction" class="com.hsp.web.action.contentAction" scope="prototype">
+    <property name="uploadServiceInter" ref="uploadServiceImpl"></property>
+    <property name="thirdbarServiceInter" ref="thirdbarServiceImpl"></property>
+    <property name="wordServiceInter" ref="wordServiceImpl"/>
+    </bean>
+    
+    <bean id="carouselAction" class="com.hsp.web.action.carouselAction" scope="prototype">
+    <property name="wordServiceInter" ref="wordServiceImpl"/>
+    </bean>
+    
+    <bean id="testkindeditorAction" class="com.hsp.web.action.testkindeditorAction" scope="prototype">
+    </bean>
+
+    <!-- 配置事务管理器 -->
+<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+  	<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<tx:annotation-driven transaction-manager="txManager"/>
+    </beans> 

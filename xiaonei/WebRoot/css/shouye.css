@@ -1,0 +1,314 @@
+*{
+     margin:0 auto;
+     padding:0;
+}
+.bigbigdiv{
+	overflow:hidden;
+}
+body{
+	text-align:center;
+}
+.shouye{
+	width:1004px;
+	 border:0px;
+	 height:590px;
+	  align:center;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    /*background-color:pink;*/
+	    margin:0 auto;
+}
+.left{
+	width:280px;
+	 border:0px;
+	 height:620px;
+	  align:left;
+	  float:left;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    /*background-color:pink;*/
+	    margin:0 auto;
+}
+.tablenews{
+	width:270px;
+	 border:0px;
+	 height:210px;
+	  align:left;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+	    margin-top:10px;
+
+}
+.tablenewstr1,.tablenewstr10,.tablenewstr12{
+	width:180px;
+  height:24px;
+  overflow:hidden;
+    border-bottom:1px dashed #d4d6d7;	
+}
+.text1{
+  width:176px;
+  height:24px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  -moz-text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.text2{
+  width:60px;
+  height:24px;
+  overflow:hidden;
+  -o-text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  -moz-text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tablenewstr2,.tablenewstr11,.tablenewstr13{
+	width:60px;
+	 border:0px;
+	 height:24px;
+	    background-color:#FFFFFF;
+	    /*background-color:pink;*/
+	    margin:0 auto;
+	    border-bottom:1px dashed #d4d6d7;	
+}
+.jianli{
+	width:273px;
+	 border:0px;
+	 height:160px;
+	  align:left;
+	  float:left;	//background-color:pink;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+	    margin-top:10px;
+}
+.tablejianlitd3,.tablejianlitd4{
+	width:116px;
+	 border:0px;
+	 height:106px;
+	  align:left;
+	  float:right;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+}
+.tablejianlitd4{
+	width:140px;
+}
+.lianjie{
+	width:273px;
+	 border:0px;
+	 height:200px;
+	  align:left;
+	  float:left;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+}
+.tablejianlitd5{
+	width:259px;
+	 border:0px;
+	 height:50px;
+	  align:left;
+	  float:right;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+}
+.right{
+	width:720px;
+	 border:0px;
+	 /*height:590px;*/
+	 float:left;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+}
+.right12,.right13{
+	width:710px;
+	 border:0px;
+	 height:420px;
+	 float:left;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+}
+.right13{
+	height:170px;
+	/*background-color:pink;*/
+}
+.right121,.right122,.right1211,.right1212{
+	width:500px;
+	 border:0px;
+	 height:420px;
+	 float:left;
+	 background-color:#FFFFFF;
+	 margin:0 auto;
+}
+.right122{
+	width:200px;
+	float:right;
+	margin-top:8px;
+}
+.right1211{
+	 height:250px;
+	  border-bottom:1px dashed #d4d6d7;	
+	 /*background-color:green;*/
+}
+.right1212{
+	width:450px;
+     height:140px;
+     margin-top:5px;
+     margin-left:30px;
+}
+.tablejianlitd6,.tablejianlitd7{
+	width:400px;
+	 border:0px;
+	 height:30px;
+	  align:right;
+	  float:left;
+	    background-color:#FFFFFF;
+	    margin-top:12px;
+}
+.tablejianlitd7{
+	width:50px;
+	float:left;
+}
+.right1211jianjie{
+	width:450px;
+	 border:0px;
+	 height:180px;
+	  text-align:left;
+	  float:left;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+	    margin-left:25px;
+	    float:left;
+}
+.tablejianlitd89{
+	width:440px;
+}
+.tablejianlitd8,.tablejianlitd9{
+	width:296px;
+	 border:0px;
+	 border-bottom:1px dashed #d4d6d7;
+	 height:25px;
+	  float:left;
+	  text-align:left;
+	    background-color:#FFFFFF;
+	    margin:0 auto;
+}
+.tablejianlitd9{
+	width:140px;
+	float:right;
+	text-align:right;
+}
+.tablenewstr10,.tablenewstr11{
+	border-bottom:0px;
+}
+.jslunbotu,.sblunbotu{
+	width:200px;
+	 border:0px;
+	 /*border-bottom:1px dashed gray;*/
+	 height:390px;
+	  align:left;
+	  float:left;
+	   cellpadding:0px;
+	    cellspacing:0px;
+	    /*background-color:pink;*/
+	    margin:0 auto;
+}
+.sblunbotu{
+	width:720px;
+	height:140px;
+	border-bottom:0px;
+}
+.picMarquee-left{ width:685px;  overflow:hidden; position:relative;  border:1px solid #ccc; margin-left:10px; }
+		.picMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
+		.picMarquee-left .hd .prev,.picMarquee-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+			 cursor:pointer; background:url("../images/arrow.png") no-repeat;}
+		.picMarquee-left .hd .next{ background-position:0 -50px;  }
+		.picMarquee-left .hd .prevStop{ background-position:-60px 0; }
+		.picMarquee-left .hd .nextStop{ background-position:-60px -50px; }
+		.picMarquee-left .bd{ padding:10px;   }
+		.picMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+		.picMarquee-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+		.picMarquee-left .bd ul li .pic{ text-align:center; }
+		.picMarquee-left .bd ul li .pic img{ width:80px; height:100px; display:block; padding:2px; border:1px solid #ccc; }
+		.picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
+		.picMarquee-left .bd ul li .title{ line-height:24px;   }
+.tablenewstr12{
+	width:660px;
+	border-bottom:0px;	
+}
+.tablenewstr13{
+	width:60px;
+	border-bottom:0px;
+}
+.zhujiangjiaoshi{
+	width:200px;
+	height:110px;
+	border-bottom:0px;
+	align:left;
+	float:left;
+	margin-top:10px;
+}
+.zhujiangdiv{
+	width:80px;
+	height:110px;
+	border-bottom:0px;
+	align:left;
+	float:left;
+	background-color:pink;
+}
+.zhujiangdiv img{
+	 width: 100%;
+    height: 100%;
+}
+
+
+
+
+#Scroll22{
+    width:720px;
+	height:140px;
+    position: relative;
+    overflow: hidden;
+    /*border: 1px solid #32a2d5;*/
+    margin: 0px auto;
+   
+}
+#imgList{
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    /*transition: all 0.1s;
+    -moz-transition: all 0.1s;*/
+}
+#Scroll22 ul{
+    display: inline-block;
+    white-space: nowrap;/*好腻害的属性！就不需要js去动态设置宽度了，强制让li元素不会出现自动换行*/
+}
+#Scroll22 ul li{
+    width:90px;
+	height:140px;
+    display: inline-block;
+    margin-left:50px;
+}
+#Scroll22 ul li img{
+    border: 0px solid #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+

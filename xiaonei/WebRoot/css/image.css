@@ -1,0 +1,32 @@
+*{
+     margin:0 auto;
+     padding:0;
+}
+.bigbigdiv{
+	overflow:hidden;
+}
+body{
+	text-align:center;
+}
+.imagebig{
+	width:720px;
+	/*height:720px;*/
+    border:0px;
+    cellpadding:0px;
+    cellspacing:0px;
+    align:center;
+	/*float:left;*/
+    margin:0 auto;
+     /*background-color:pink;*/
+}
+.imagebig{
+	 margin:0 auto;
+	 margin-top:20px;
+	 margin-left:60px;
+}
+.imagebig img{
+max-width:600px;
+width:600px;
+width:expression(document.body.clientWidth>600?"600px":"auto");
+overflow:hidden;
+}
